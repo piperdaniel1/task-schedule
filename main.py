@@ -109,7 +109,7 @@ def add_task(db : Database) -> None:
         print(parts)
         task = {}
         if len(parts) == 1:
-            task["Name"] = parts[0]
+            task["Name"] = parts[0].replace(',', '(comma)')
             task["Due date"] = "None"
             task["Priority"] = "2"
             task["Time"] = "0.5"
@@ -117,7 +117,7 @@ def add_task(db : Database) -> None:
 
             db.add_task(task)
         elif len(parts) == 2:
-            task["Name"] = parts[0]
+            task["Name"] = parts[0].replace(',', '(comma)')
             task["Due date"] = get_date_from_input(parts[1])
             task["Description"] = "None"
             task["Priority"] = "2"
@@ -125,7 +125,7 @@ def add_task(db : Database) -> None:
 
             db.add_task(task)
         elif len(parts) == 3:
-            task["Name"] = parts[0]
+            task["Name"] = parts[0].replace(',', '(comma)')
             task["Due date"] = get_date_from_input(parts[1])
             task["Description"] = "None"
             task["Priority"] = parts[2]
@@ -133,7 +133,7 @@ def add_task(db : Database) -> None:
 
             db.add_task(task)
         elif len(parts) == 4:
-            task["Name"] = parts[0]
+            task["Name"] = parts[0].replace(',', '(comma)')
             task["Due date"] = get_date_from_input(parts[1])
             task["Description"] = "None"
             task["Priority"] = parts[2]
@@ -141,7 +141,7 @@ def add_task(db : Database) -> None:
 
             db.add_task(task)
         elif len(parts) == 5:
-            task["Name"] = parts[0]
+            task["Name"] = parts[0].replace(',', '(comma)')
             task["Due date"] = get_date_from_input(parts[1])
             task["Description"] = "None"
             task["Priority"] = parts[2]
